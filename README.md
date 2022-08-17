@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Intility/helm-version/actions">
+  <a href="https://github.com/Intility/azure-app-redirect-uris/actions">
     <img alt="pipeline" src="https://github.com/Intility/azure-app-redirect-uris/actions/workflows/publish.yml/badge.svg" style="max-width:100%;" />
   </a>
-  <a href="https://www.npmjs.com/package/@intility/helm-version">
+  <a href="https://www.npmjs.com/package/@intility/azure-app-redirect-uris">
     <img alt="package version" src="https://img.shields.io/npm/v/@intility/azure-app-redirect-uris?label=%40intility%2Fazure-app-redirect-uris" style="max-width:100%;" />
   </a>
 </p>
