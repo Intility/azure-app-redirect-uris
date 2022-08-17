@@ -11,7 +11,7 @@ program
   .name('npx @intility/azure-app-redirect-uris')
   .description(description)
   .version(version)
-  .argument('<appId>', 'The app id')
+  .argument('<appObjectId>', 'The object ID of the app registration')
   .addArgument(
     new Argument('<platform>', 'Redirect URI platform').choices([
       'publicClient',
@@ -25,7 +25,7 @@ program
   .argument('<redirectUri>', 'The redirect URI')
   .action(
     async (
-      appId: string,
+      appObjectId: string,
       platform: 'publicClient' | 'web' | 'spa',
       action: 'add' | 'remove',
       redirectUri: 'string'
@@ -41,7 +41,7 @@ program
         );
         const client = Client.initWithMiddleware({ authProvider });
 
-        const app = await client.api(`/applications/${appId}`).get();
+        const app = await client.api(`/applications/${appObjectId}`).get();
 
         const redirectUris = new Set<string>(app[platform].redirectUris);
 
@@ -72,7 +72,7 @@ program
           redirectUris.delete(redirectUri);
         }
 
-        await client.api(`/applications/${appId}`).patch({
+        await client.api(`/applications/${appObjectId}`).patch({
           [platform]: { ...app[platform], redirectUris: [...redirectUris] },
         });
 
