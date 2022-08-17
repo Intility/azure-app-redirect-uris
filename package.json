@@ -1,0 +1,57 @@
+{
+  "name": "@intility/azure-app-redirect-uris",
+  "version": "0.1.0",
+  "description": "CLI to add and remove redirect uris from an Azure App Registration.",
+  "main": "./bin/cli.js",
+  "bin": {
+    "azure-app-redirect-uris": "./bin/cli.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c --watch"
+  },
+  "homepage": "https://github.com/Intility/azure-app-redirect-uris",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Intility/azure-app-redirect-uris.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "keywords": [
+    "azure",
+    "npm",
+    "app",
+    "redirect uri"
+  ],
+  "author": "Intility",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/inquirer": "^8.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.6.2",
+    "rollup": "^2.75.3",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@azure/identity": "^2.1.0",
+    "@microsoft/microsoft-graph-client": "^3.0.2",
+    "commander": "^9.3.0",
+    "isomorphic-fetch": "^3.0.0"
+  }
+}
