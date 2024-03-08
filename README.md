@@ -45,7 +45,7 @@ If authenticating using a Service Principal (clientId & clientSecret/clientCerti
 ```yaml
 # Run after deployment
 verify:azure:
-  image: node:16
+  image: node:lts
   variables:
     APP_OBJECT_ID: 00000000-0000-0000-0000-000000000000
     URL: http://localhost:3000
@@ -58,7 +58,7 @@ verify:azure:
 
 # Run after deployment takedown
 stop:azure:
-  image: node:16
+  image: node:lts
   variables:
     APP_OBJECT_ID: 00000000-0000-0000-0000-000000000000
     URL: http://localhost:3000
